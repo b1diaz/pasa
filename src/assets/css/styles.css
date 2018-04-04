@@ -1,0 +1,44 @@
+
+/*----------------------------     
+   -------- CONTAINER -----------*/
+   #container{
+    margin-left: 0px;
+    transition: all 0.3s;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+/* Small devices (landscape phones, 300px and up) */
+
+@media (min-width: 576px) {
+
+    #container{
+        margin-left: 70px;
+    }
+    #container.active{
+        margin-left: 0px;
+    }
+}
+@media (min-width: 768px) { 
+    
+    html{
+        font-size: 16px;
+    }
+    #container{
+        margin-left: 210px;
+    }
+    #container.active{
+        margin-left: 70px;
+    }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+     html{
+        font-size: 17px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { }

@@ -1,0 +1,88 @@
+
+/*----------------------------     
+   -------- TOPBAR -----------*/
+
+   #top-bar{
+    min-width: 300px;
+    height: 60px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+}
+.nav-header{
+    width: 70px;
+}
+    
+.nav-header span{
+    vertical-align: top;
+    display: inline-block;
+    width: 70px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+    
+.nav-header .navbar-brand{
+    display: none;
+}
+.nav-menu{
+    display:inline-block;
+}
+.navbar .form-control {
+    padding: .75rem 1rem;
+    border-width: 0;
+    border-radius: 0;
+}
+.nav-search{
+    width: 100%;
+}
+.nav-menu .nav-link {
+    padding: .5rem;
+    color: black;
+}
+/*--------- menu profile ------*/
+html{
+    font-size: 16px;
+}
+.navbar .dropdown-menu{
+    width: 270px;
+    margin-left: -180px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+}
+.navbar .dropdown-menu ul{
+    padding: none;
+    padding: 0px 10px; }
+
+.navbar .item-profile-img{
+    display: inline-block;
+    vertical-align: top;
+    width: 70px;
+}
+.navbar .item-profile-img img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.navbar .item-profile-description{
+    display: inline-block;
+    padding-left: 10px;
+}
+.navbar .dropdown-menu li{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.navbar .dropdown-menu li a{
+    clear: both;
+    text-decoration: none;
+    padding: 5px 0px;
+    width: 100%;
+    display: block;
+    border-radius: 3px;
+}
+.navbar .dropdown-menu li a:hover{
+    background: rgba(33, 37, 41, 0.16);
+}
+.navbar .dropdown-menu li a span{
+    padding: 10px;
+}
+.navbar .dropdown-toggle::after {
+    display: none;
+}
