@@ -1,0 +1,8 @@
+<h6>{{leyenda}}</h6>
+<div class="input-group">
+    <div class="input-group-prepend">
+      <button class="btn btn-outline-primary" type="button" (click)="cambiarValor(-5)" ><i class="fas fa-minus"></i></button>
+    </div>
+    <input #txtProgreso type="number" class="form-control" name="progreso" [(ngModel)]="progreso" (ngModelChange)="onChanges($event)" >
+    <button class="btn btn-outline-primary" type="button" (click)="cambiarValor(5)" ><i class="fas fa-plus"></i></button>  
+  </div>

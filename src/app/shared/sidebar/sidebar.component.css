@@ -73,9 +73,6 @@
 ----------------------------------------------------- */
 /* Small devices (landscape phones, 300px and up) */
 @media (min-width: 576px) {
-  html {
-    font-size: 16px; }
-
   #sidebar {
     margin-left: 0px; }
 
@@ -114,7 +111,4 @@
     right: 20px;
     bottom: 12px; } }
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  html {
-    font-size: 17px; } }
 /* Extra large devices (large desktops, 1200px and up) */

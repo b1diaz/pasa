@@ -1,11 +1,19 @@
-
+   
+    .row+.row{
+        margin-top: 1rem;
+    }
 /*----------------------------     
    -------- CONTAINER -----------*/
    #container{
     margin-left: 0px;
+    padding: 10px 15px;
     transition: all 0.3s;
-}
+    }
 
+.breadcrumb {
+    padding: 0;
+    background: #fff;
+}
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
@@ -13,7 +21,6 @@
 /* Small devices (landscape phones, 300px and up) */
 
 @media (min-width: 576px) {
-
     #container{
         margin-left: 70px;
     }
@@ -21,11 +28,7 @@
         margin-left: 0px;
     }
 }
-@media (min-width: 768px) { 
-    
-    html{
-        font-size: 16px;
-    }
+@media (min-width: 768px){ 
     #container{
         margin-left: 210px;
     }
@@ -35,10 +38,10 @@
 }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-     html{
-        font-size: 17px;
-    }
+     
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { }
+@media (min-width: 1200px) { 
+    
+}
