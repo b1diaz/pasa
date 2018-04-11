@@ -11,6 +11,7 @@ import { pagesRouting } from './pages.router';
 import {FormsModule} from '@angular/forms';
 import { IncrementadorComponent } from './components/incrementador/incrementador.component';
 import { GraficoDonaComponent } from './components/grafico-dona/grafico-dona.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { GraficoDonaComponent } from './components/grafico-dona/grafico-dona.com
     ProgressComponent,
     Graficas1Component,
     IncrementadorComponent,
-    GraficoDonaComponent
+    GraficoDonaComponent,
+    RxjsComponent
   ],
   exports:[
     PagesComponent,

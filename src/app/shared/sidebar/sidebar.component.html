@@ -3,15 +3,14 @@
 <aside id="sidebar" class="bg-dark animated fadeInLeft">
     <ul class="list-unstyled components">
        <!-- ------------------- Item1 --------------- -->
-        <li class="subMenu align-content-center">
+        <li *ngFor="let menu of _sideBar.menu"
+         class="subMenu align-content-center">
           <a class="itemPrincipal " href="#profileSubmenu" data-toggle="collapse" aria-expanded="false">
-              <div class="i"><i class="fas fa-user-circle"></i></div>
-              Profile
+              <div class="i"><i [class]="menu.icono"></i></div>
+              {{menu.titulo}}
           </a>
           <ul class="collapse list-unstyled" id="profileSubmenu">
-              <li><a href="#">profile 1</a></li>
-              <li><a href="#">profile 2</a></li>
-              <li><a href="#">profile 3</a></li>
+              <li *ngFor="let subMenu of menu.subMenu"><a [routerLink]='[subMenu.Url] ' routerLinkActive="active">{{subMenu.titulo}} </a></li>
           </ul>
         </li>
         <li><hr style="margin: 0px"></li>

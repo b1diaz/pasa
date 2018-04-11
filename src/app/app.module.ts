@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { PagesComponent } from './pages/pages.component';
 import { appRouting } from './app.routes';
+import { ServiceModule } from './services/service.module';
 
 
 
@@ -16,7 +17,8 @@ import { appRouting } from './app.routes';
   imports: [
     BrowserModule,
     PagesModule,
-    appRouting
+    appRouting,
+    ServiceModule
   ],
   providers: [],
   bootstrap: [AppComponent]

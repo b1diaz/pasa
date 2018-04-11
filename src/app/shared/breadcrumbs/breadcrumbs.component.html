@@ -1,10 +1,13 @@
 <div class="row">
-  <div class="col-12">
+  <div class="col-5" id="title-breadcrumb">
+    {{titleBreadcrumb}}
+  </div>
+  <div class="col-7">
       <nav aria-label="breadcrumb pa-0">
           <ol class="breadcrumb justify-content-end">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
+            <li class="breadcrumb-item active" aria-current="page">{{titleBreadcrumb}}</li>
           </ol>
         </nav>
   </div>
