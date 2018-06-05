@@ -1,0 +1,45 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <div class=" col-md-12" id="contenido">
+      <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        <!-- ------ header cover -------- -->
+        <header class="masthead mb-auto">
+          <div class="inner">
+          <h3 class="masthead-brand">Company</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Contact</a>
+          </nav>
+          </div>
+        </header>
+        <!-- ------ content Cover -------- -->
+        
+        <main role="main" class="inner cover">
+          <h1 class="cover-heading">Bienvenidos</h1>
+          <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+          
+          
+          
+          <div id="normal">
+            <button type="button" [routerLink]="['/login']" class="btn btn-outline-light float-left" data-toggle="modal" data-target="#modalLogin">
+              Iniciar Sesion
+            </button>
+            <button type="button" [routerLink]="['/registro']" class="btn btn-outline-light float-right" data-toggle="modal" data-target="#modalLogin">
+              Registrarse
+            </button>
+          </div>
+          <div id="google" class="btn btn-outline-warning"><i class="fab fa-google-plus-g text-left float-left" style="font-size: 25px"></i><span>Iniciar con Google</span> </div>
+        </main>
+      <!-- ------ Footer Cover -------- -->
+        <footer class="mastfoot mt-auto">
+          <div class="inner">
+            <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    
+  </div>
+</div>

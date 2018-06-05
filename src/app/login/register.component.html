@@ -1,0 +1,26 @@
+<div id="registro" class="text-center">
+  <!-- forms -->  
+  <form ngNativeValidate [formGroup]="formRegistro" (ngSubmit)="registrarUsuario()" class="form-signin" id="formRegistro">
+    <div class="registro-header text-center">
+        <img class="mb-4 fas fa-box" src="" alt="" width="40" height="40" style="font-size: 3rem;">
+        <span class="pl-2"><h2>Company</h2></span>
+    </div>
+      
+      <input formControlName="nombre" name="nombre" type="text" id="registroNombre" class="form-control" placeholder="Nombre" autofocus="" required>
+     
+      <input formControlName="email" name="email" type="email" id="RegistroEmail" class="form-control" placeholder="Correo Institucional" required>
+      
+      <input formControlName="password" name="password" type="password" id="registroPassword" class="form-control" placeholder="Contraseña" required>
+      
+      <input formControlName="password2" name="password2" type="password" id="registroPassword2" class="form-control" placeholder="Confirmar Contraseña" required>
+      
+      <div class="form-group" *ngIf="formRegistro.errors?.sonIguales && !formRegistro.$pristine" ><p class="text-danger">las contraseñas no coinciden</p> </div>
+      <div class="checkbox mb-3">
+        <label>
+          <input formControlName="condiciones" id="registroCondiciones" name="condiciones" type="checkbox" value="remember-me"> Acepto Condiciones
+        </label>
+      </div>
+      <button id="boton"class="btn btn-lg btn-dark btn-block" type="submit" >Registar</button>
+      <div> <a [routerLink]="['/login']" >Iniciar Sesion</a></div>
+  </form>
+</div> 

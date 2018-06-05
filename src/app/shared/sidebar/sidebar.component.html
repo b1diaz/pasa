@@ -1,15 +1,15 @@
 <!-- ----------------------------------------------------------------------------     
 ------------------------------------- SIDEBAR  ------------------------------ --> 
-<aside id="sidebar" class="bg-dark animated fadeInLeft">
+<aside id="sidebar" class="bg-dark animated fadeInLeft accordion">
     <ul class="list-unstyled components">
        <!-- ------------------- Item1 --------------- -->
         <li *ngFor="let menu of _sideBar.menu"
          class="subMenu align-content-center">
-          <a class="itemPrincipal " href="#profileSubmenu" data-toggle="collapse" aria-expanded="false">
+          <a class="itemPrincipal " data-toggle="collapse" data-target="#profileSubmenu" aria-expanded="false" aria-controls="profileSubmenu">
               <div class="i"><i [class]="menu.icono"></i></div>
               {{menu.titulo}}
           </a>
-          <ul class="collapse list-unstyled" id="profileSubmenu">
+          <ul class="collapse list-unstyled" id="profileSubmenu" data-parent="#sidebar">
               <li *ngFor="let subMenu of menu.subMenu"><a [routerLink]='[subMenu.Url] ' routerLinkActive="active">{{subMenu.titulo}} </a></li>
           </ul>
         </li>
@@ -17,13 +17,13 @@
         
       <!-- ------------------- Item2 --------------- --> 
         <li class="active subMenu">
-            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+            <a href="#homeSubmenu" data-toggle="collapse" data-target="#homeSubmenu" aria-expanded="false" aria-controls="homeSubmenu">
                 <div class="i">
                     <i class="fas fa-home"></i>
                 </div>
               Home
             </a>
-            <ul class="collapse list-unstyled" id="homeSubmenu">
+            <ul class="collapse list-unstyled" id="homeSubmenu" data-parent="#sidebar">
                 <li><a href="#">Home 1</a></li>
                 <li><a href="#">Home 2</a></li>
                 <li><a href="#">Home 3</a></li>
@@ -31,13 +31,13 @@
         </li>
       <!-- ------------------- Item3 --------------- --> 
         <li class="subMenu">
-            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
+            <a href="#pageSubmenu" data-toggle="collapse" data-target="#pageSubmenu" aria-expanded="false" aria-controls="pageSubmenu">
                 <div class="i">
                     <i class="fas fa-file-alt"></i>
                 </div>
                 Pages
             </a>
-          <ul class="collapse list-unstyled" id="pageSubmenu">
+          <ul class="collapse list-unstyled" id="pageSubmenu" data-parent="#sidebar">
               <li><a href="#">Page 1</a></li>
               <li><a href="#">Page 2</a></li>
               <li><a href="#">Page 3</a></li>
@@ -71,5 +71,6 @@
           </a>
         </li>
     </ul>
+
 </aside>
  

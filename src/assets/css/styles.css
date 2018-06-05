@@ -5,6 +5,7 @@
 /*----------------------------     
    -------- CONTAINER -----------*/
    #container{
+    height: 100vh;
     margin-left: 0px;
     padding: 10px 15px;
     transition: all 0.3s;
@@ -25,19 +26,13 @@
 /* Small devices (landscape phones, 300px and up) */
 
 @media (min-width: 576px) {
-    #container{
-        margin-left: 70px;
-    }
-    #container.active{
-        margin-left: 0px;
-    }
+    
+   
 }
 @media (min-width: 768px){ 
-    #container{
-        margin-left: 210px;
-    }
+    
     #container.active{
-        margin-left: 70px;
+        margin-left: 210px;
     }
 }
 /* Large devices (desktops, 992px and up) */

@@ -1,5 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, group } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { UsuarioService } from '../services/service.index';
+import { Usuario } from '../models/usuario.models';
 import { Router } from '@angular/router';
+import { element } from 'protractor';
+
 
 
 @Component({
@@ -7,13 +12,39 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit { 
+  email: string;
+  recuerdame: boolean;
+  
+  constructor( public _usuarioService:UsuarioService, public router:Router  ){}
 
-  constructor( public router:Router) { }
+  ngOnInit(){
+    
+    this.email = localStorage.getItem('email') || "";
 
-  ngOnInit() {
+    if(this.email.length > 1){
+      this.recuerdame = true;
+    }else{
+      this.recuerdame = false;
+    }
   }
-  ingresar(){
-    this.router.navigate(['/dashboard']);
+
+ 
+
+  ingresar(formLogin:NgForm){
+
+    if(formLogin.invalid){
+      return;
+    }
+  
+    let usuario = new Usuario(null, formLogin.value.email, formLogin.value.password );
+    
+    return this._usuarioService.login(usuario, this.recuerdame)
+                          .subscribe( correcto => this.router.navigate(['/dashboard']));
   }
+
+  
+
+
 }
+

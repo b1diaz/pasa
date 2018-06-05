@@ -7,17 +7,17 @@
           box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4); }
 
 .nav-header {
-  width: 70px; }
+  min-width: 70px; }
 
+  .nav-header .navbar-brand{
+    display: none;
+  }
 .nav-header span {
   vertical-align: top;
   display: inline-block;
   width: 70px;
   font-size: 1.8rem;
   text-align: center; }
-
-.nav-header .navbar-brand {
-  display: none; }
 
 .nav-menu {
   display: inline-block; }
@@ -82,3 +82,18 @@ html {
 
 .navbar .dropdown-toggle::after {
   display: none; }
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+/* Small devices (landscape phones, 300px and up) */
+
+@media (min-width: 576px) {
+  .nav-header {
+    min-width: 180px; }
+  .nav-header .navbar-brand{
+    display: inline-block;
+  }
+}
