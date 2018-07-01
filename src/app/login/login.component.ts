@@ -20,7 +20,14 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(){
     
-    this.email = localStorage.getItem('email') || "";
+    if(localStorage.getItem('emailRegistrado')){
+      this.email = localStorage.getItem('emailRegistrado');
+      localStorage.removeItem('emailRegistrado');
+    }else{
+      this.email = localStorage.getItem('email') || "";
+    }
+
+    
 
     if(this.email.length > 1){
       this.recuerdame = true;

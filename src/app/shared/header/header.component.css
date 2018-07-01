@@ -3,8 +3,8 @@
 #top-bar {
   min-width: 300px;
   height: 60px;
-  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4); }
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); }
 
 .nav-header {
   min-width: 70px; }
@@ -12,6 +12,7 @@
   .nav-header .navbar-brand{
     display: none;
   }
+  
 .nav-header span {
   vertical-align: top;
   display: inline-block;
@@ -38,47 +39,58 @@
 html {
   font-size: 16px; }
 
-.navbar .dropdown-menu {
-  width: 270px;
-  margin-left: -180px;
-  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4); }
-
-.navbar .dropdown-menu ul {
+.item-profile{
   padding: none;
-  padding: 0px 10px; }
+}
+
+.navbar .dropdown-menu {
+  padding: 0px;
+  width: 200px;
+  margin-left: -90px;
+box-shadow:1px 0px 5px rgba(0, 0, 0, 0.1);}
 
 .navbar .item-profile-img {
   display: inline-block;
   vertical-align: top;
-  width: 70px; }
+  width: 32px;
+  height: 32px;
+}
 
 .navbar .item-profile-img img {
   width: 100%;
-  border-radius: 5px; }
+  border-radius:50%; }
 
-.navbar .item-profile-description {
-  display: inline-block;
-  padding-left: 10px; }
-
-.navbar .dropdown-menu li {
+.navbar .dropdown-menu  ul{
   list-style: none;
-  padding: 0px;
-  margin: 0px; }
-
-.navbar .dropdown-menu li a {
-  clear: both;
+  padding:0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0px;
+}
+.navbar .dropdown-menu  div{
+  padding: 0px 10px;
+}
+.navbar .dropdown-menu li{
+  padding: 4px 20px;
+  
+}
+.navbar .dropdown-menu a{
   text-decoration: none;
-  padding: 5px 0px;
-  width: 100%;
-  display: block;
-  border-radius: 3px; }
+  color: #646464;
+}
 
-.navbar .dropdown-menu li a:hover {
-  background: rgba(33, 37, 41, 0.16); }
+.navbar .dropdown-menu li:hover{
+  background:#dcedc8;
+}
+.navbar .item-profile-info{
+  background:#28a7469d;
+  
+box-shadow:1px 0px 5px #28a74667;}
+
+
 
 .navbar .dropdown-menu li a span {
-  padding: 10px; }
+  padding-right: 10px; }
 
 .navbar .dropdown-toggle::after {
   display: none; }

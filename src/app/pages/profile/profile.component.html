@@ -1,0 +1,64 @@
+<div class="row">
+  <div class="col-7">
+
+    <div class="card">
+      <form ngNativeValidate #formPerfil="ngForm" (ngSubmit)="guardar(formPerfil.value)">
+        <div class="card-header card-header-divider">Informacion Basica
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="inlineFormInputGroup">Nombre Usuario</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="fas fa-user"></i>
+                </div>
+              </div>
+              <input [ngModel]="usuario.nombre" name="nombre" type="text" class="form-control" placeholder="Nombre de Usuario" required>
+            </div>
+            
+          </div>
+          <!-- <fieldset disabled> -->
+          <div class="form-group">
+            <label for="inlineFormInputGroup">Correo electronico</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="fas fa-at"></i>
+                </div>
+              </div>
+              <input [ngModel]="usuario.email"  disabled type="text" name="email" class="form-control" id="inlineFormInputGroup" placeholder="Correo de Usuario" required>
+            </div>
+          </div>
+          <!-- </fieldset> -->
+          <button type="button" type="submit" class="btn btn-success" >Success</button>
+        </div>
+
+
+      </form>
+    </div>
+  </div>
+
+
+  <div class="col-5">
+    <div class="card ">
+      <div class="card-header card-header-divider text-center">
+        Imagen de Usuario
+      </div>
+      <div class="card-body">
+        <div id="imagenPerfil">
+          <img *ngIf="!imagenTem" [src]="usuario.img | imagen" alt="">
+          <img *ngIf="imagenTem" [src]="imagenTem" alt="">
+
+        </div>
+        <div class="form-group">
+          <input type="file" (change)="seleccionImagen($event.target.files[0] )" class="form-control-file aling-center" id="exampleFormControlFile1">
+
+        </div>
+        <button type="button" (click)="cambiarImagen()" [disabled]="!imagenSubir" class="btn btn-success btn-block">Actualizar Imagen</button>
+
+      </div>
+    </div>
+
+  </div>
+</div>

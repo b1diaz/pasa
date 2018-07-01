@@ -21,7 +21,7 @@
         <a class="nav-link text-dark dropdown-toggle" href="#" role="button" id="menuMessage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa-envelope"></i></a>
         
         <!-- ------------------ Menu Message --------------------- -->
-        <div id="ll" class="dropdown-menu dropdown-menu-right animated flipInY" aria-labelledby="menuMessage">
+        <div id="ll" class="dropdown-menu dropdown-menu-right animated fadeIn" aria-labelledby="menuMessage">
           <ul class="item-profile">
             <li>Mensajes recibidos</li>
             <hr>
@@ -37,27 +37,24 @@
         <!-- ------------------ Fin Menu Message --------------------- --> 
       </li>
       <li class="nav-item">
-        <a class="nav-link text-dark dropdown-toggle" href="#" role="button" id="menuProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle"></i></a>
+        <a class="nav-link text-dark dropdown-toggle" href="#" role="button" id="menuProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div class="item-profile-img">
+          <img [src]="usuario.img | imagen" alt="">
+        </div></a>
         <!-- ------------------ Menu Profile --------------------- -->
-        <div id="lk" class="dropdown-menu dropdown-menu-right animated flipInY" aria-labelledby="menuProfile">
+        <div id="lk" class="dropdown-menu dropdown-menu-right animated fadeIn" aria-labelledby="menuProfile">
+          <ul class="item-profile-info">
+            <div class="item-profile-description">
+                  <div class="text-light correo" style="font-weight: 500">{{usuario.nombre}} </div>  
+                  <div class="text-light" style="font-size: 0.8rem" >{{usuario.email}} 
+              </div>
+              
+            </div>
+          </ul>
           <ul class="item-profile">
-            <li>
-              <div class="item-profile-img">
-                <img src="" alt="">
-              </div>
-              <div class="item-profile-description">
-                <div class="text-dark">nombre</div>
-                <div class="text-muted correo" style="font-size: 0.8rem">badzdiaz@gmail.com </div>
-              </div>
-            </li>
-              <hr>
-            <li><a href="" class="text-dark"><span><i class="fas fa-user-circle"></i></span>item1</a></li>
-              <li><a href="" class="text-dark"><span><i class="fas fa-user-circle"></i></span>item2</a></li>
-              <li><a href="" class="text-dark"><span><i class="fas fa-user-circle"></i></span>item3</a></li>
-              <hr style="margin:5px;">
-              <li><a href="" class="text-dark"><span><i class="fas fa-user-circle"></i></span>item1</a>
-              <hr style="margin:5px;">
-            <li (click)="_usuarioServices.logout()"> <a href="" class="text-dark"><span><i class="fas fa-sign-out-alt"></i></span>Cerrar Sesion</a></li> 
+            <li><a href="" ><span><i class="fas fa-user-circle"></i></span>item1</a></li>
+              <li><a href="" ><span><i class="fas fa-user-circle"></i></span>item2</a></li>
+              <li><a href="" ><span><i class="fas fa-user-circle"></i></span>item3</a></li>
+            <li (click)="_usuarioServices.logout()"> <a href=""><span><i class="fas fa-sign-out-alt"></i></span>Cerrar Sesion</a></li> 
           </ul>
         </div>
         <!-- ------------------ Fin Menu Profile --------------------- --> 

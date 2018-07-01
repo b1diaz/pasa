@@ -12,13 +12,18 @@ import {FormsModule} from '@angular/forms';
 import { IncrementadorComponent } from './components/incrementador/incrementador.component';
 import { GraficoDonaComponent } from './components/grafico-dona/grafico-dona.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { ProfileComponent } from './profile/profile.component';
+import { PipesModule } from '../pipes/pipes.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   imports: [
     SharedModule,
     pagesRouting,
     FormsModule,
-    ChartsModule
+    ChartsModule,
+    PipesModule,
+    CommonModule
   ],
   declarations: [
     PagesComponent,
@@ -27,7 +32,8 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     Graficas1Component,
     IncrementadorComponent,
     GraficoDonaComponent,
-    RxjsComponent
+    RxjsComponent,
+    ProfileComponent
   ],
   exports:[
     PagesComponent,

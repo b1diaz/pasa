@@ -1,18 +1,21 @@
 
     <div id="login"> 
       <form ngNativeValidate #formLogin="ngForm" class="form-signin text-center" (ngSubmit)="ingresar(formLogin)">
-        <img class="mb-4 fas fa-box" src="" alt="" width="72" height="72" style="font-size: 5rem;">
+        <div class="registro-header text-center" [routerLink]="['/aplicacion']" >
+        <img class="mb-4 fas fa-box" src="" alt="" width="40" height="40" style="font-size: 3rem;">
+        <span class="pl-2"><h2>Company</h2></span>
+    </div>
         <label for="inputEmail" class="sr-only">Correo</label>
         <input [ngModel]="email" name="email" type="email" id="inputEmail" class="form-control" placeholder="Correo" autofocus="" required>
        
         <label for="inputPassword" class="sr-only">Contraseña</label>
         <input ngModel name="password" type="password" id="inputPassword" class="form-control" placeholder="Contraseña"  required>
         <div class="checkbox mb-3">
-          <label>
-            <input [(ngModel)]="recuerdame" name="recuerdame" type="checkbox" value="remember-me"> Recordar Datos
-          </label>
+          <div id="recordar">
+            <input [(ngModel)]="recuerdame" class="checkbox" name="recuerdame" type="checkbox" value="remember-me"> <span>Recordar Datos</span>
+          </div>
         </div>
-        <button class="btn btn-lg btn-dark btn-block" type="submit" data-dismiss="modal">Iniciar Sesión</button>
-        <div> <a [routerLink]="['/registro']">Registrar</a> - <a >Olvide contraseña</a></div>
+        <button class="btn btn-lg btn-block btn-success" type="submit" data-dismiss="modal">Iniciar Sesión</button>
+        <small> <a [routerLink]="['/registro']">Registrar</a> - <a >Olvide contraseña</a></small>
         </form>
     </div>

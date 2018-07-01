@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { SharedService, SidebarService, UsuarioService, LoginGuardGuard} from './service.index';
+import { SubirArchivoService } from './subir-archivo/subir-archivo.service';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { SharedService, SidebarService, UsuarioService, LoginGuardGuard} from '.
     SharedService,
     SidebarService,
     UsuarioService,
-    LoginGuardGuard
+    LoginGuardGuard,
+    SubirArchivoService
   ]
 })
 export class ServiceModule { }

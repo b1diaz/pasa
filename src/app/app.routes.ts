@@ -8,6 +8,7 @@ const appRoutes:Routes =[
     
     {path:"login", component:LoginComponent},
     {path:"aplicacion",component:AplicacionComponent},
+    {path:"",component:AplicacionComponent},    
     {path:"registro", component: RegisterComponent},
     {path:"**", component:PageNoFoundComponent}
 ];

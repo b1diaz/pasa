@@ -1,0 +1,1 @@
+export const URL_SERVICES:any = "http://localhost:3000";

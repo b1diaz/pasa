@@ -1,0 +1,40 @@
+
+.card{
+background: #ffffff;
+}
+div .input-group-text{
+    background: #dcedc8;
+}
+.card{
+    border: none;
+    box-shadow:0px 0px 3px rgba(0, 0, 0, 0.1);
+}
+.card-header{
+    background: none;
+}
+.card-subtitle {
+    display: block;
+    font-size: 1rem;
+    color: rgb(112, 112, 112);
+    margin-top: 0px;
+    margin-bottom: 0.4615rem;
+}
+.card-header-divider {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #dcedc8;
+    margin: 0px 1.538rem 8px;
+}
+#imagenPerfil{
+    max-width: 150px;
+    max-height: 200px;
+    margin: 0 auto;
+    background: burlywood;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+#imagenPerfil img{
+    width: 100%;
+    max-height: 200px;;
+}
